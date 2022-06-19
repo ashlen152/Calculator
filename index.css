@@ -1,0 +1,99 @@
+:root {
+  font-family: "Roboto", Courier, monospace;
+
+  --rounded-radius: 20px;
+	--black-90: hsl(0, 00%, 15%); 
+	--black-20: hsl(0, 0%, 80%);
+	--black-10: hsl(0, 0%, 90%);
+  --orange-40: hsl(35, 90%, 60%);
+  --orange-30: hsl(35, 90%, 70%);
+  --sky-40: hsl(175, 58%, 79%);
+  --sky-30: hsl(180, 80%, 90%);
+  --sky-20: hsl(190, 100%, 95%);
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: linear-gradient(
+    20deg,
+    var(--sky-40),
+    var(--sky-30),
+    var(--sky-20)
+  );
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cal-wrapper {
+  width: 400px;
+}
+
+.cal-header {
+  background-color: var(--black-90);
+  border-top-left-radius: var(--rounded-radius);
+  border-top-right-radius: var(--rounded-radius);
+  height: 100px;
+}
+
+#total {
+	color: white;
+  display: flex;
+  padding: 0 1rem;
+  height: 100%;
+  font-size: 4rem;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.cal-wrapper button {
+  border: none;
+  height: 60px;
+  font-size: 2rem;
+  font-weight: 100;
+  cursor: pointer;
+  background-color: var(--black-10);
+  padding: 0;
+	transition: all .2;
+}
+
+.cal-wrapper button:hover {
+	background-color: var(--black-20);
+}
+
+.cal-operator {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 1px;
+  background-color: var(--black-90);
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+}
+
+.cal-operator > button {
+  flex: 1;
+  background-color: var(--black-10);
+}
+
+.cal-operator > button[equal] {
+  grid-column: 4;
+  grid-row: 2 / span 4;
+  width: 100%;
+  height: 100%;
+  background-color: var(--orange-30);
+  border-bottom-right-radius: var(--rounded-radius);
+}
+
+.cal-operator > button[equal]:hover {
+  background-color: var(--orange-40);
+}
+
+.cal-operator > button[rounded-bl] {
+  border-bottom-left-radius: var(--rounded-radius);
+}

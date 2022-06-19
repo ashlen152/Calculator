@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="index.css" />
+    <title>Calculator</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300&display=swap"
+      rel="stylesheet"
+    />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="cal-wrapper">
+        <div class="cal-header">
+          <div id="total"></div>
+        </div>
+        <div class="cal-operator">
+          <button type="button" onclick="handleOnClickOperator('+')">+</button>
+          <button type="button" onclick="handleOnClickOperator('-')">-</button>
+          <button type="button" onclick="handleOnClickOperator('*')">x</button>
+          <button type="button" onclick="handleOnClickOperator('/')">&#247;</button>
+          <button type="button" onclick="handleOnClick(7)">7</button>
+          <button type="button" onclick="handleOnClick(8)">8</button>
+          <button type="button" onclick="handleOnClick(9)">9</button>
+          <button type="button" onclick="handleOnClick(4)">4</button>
+          <button type="button" onclick="handleOnClick(5)">5</button>
+          <button type="button" onclick="handleOnClick(6)">6</button>
+          <button type="button" onclick="handleOnClick(1)">1</button>
+          <button type="button" onclick="handleOnClick(2)">2</button>
+          <button type="button" onclick="handleOnClick(3)">3</button>
+          <button type="button" onclick="handleOnClick(0)" rounded-bl>0</button>
+          <button type="button" onclick="handleOnClick('.')">.</button>
+          <button type="button" onclick="handleOnClickClear()">C</button>
+          <button type="button" onclick="handleOnClickCalculate()" equal>=</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
